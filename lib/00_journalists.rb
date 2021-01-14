@@ -70,4 +70,4 @@ def perform (tab)
     count_by_length (tab)
 end
 
-perfom
+perfom (tab)
