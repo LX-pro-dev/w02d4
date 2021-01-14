@@ -2,12 +2,13 @@ tab = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier","@marionsouzeau","@gael
 
 def num_of_handle (tab)
     puts "il y a #{tab.length} handles dans ce tableau."
+    puts "----------------------------"
 end
 
 def shortest_handle (tab)
     tab2 = tab.sort_by {|x| x.length}  
     puts "Le handle le plus cours est #{tab2[0]}."
-
+    puts "----------------------------"
 end
 
 def num_of_5_char (tab)
@@ -18,14 +19,17 @@ def num_of_5_char (tab)
         end
     end
     puts "Il y a #{count} handles avec 5 caractères."
+    puts "----------------------------"
 end
 
 def num_of_Maj (tab)
     puts "Il y a #{tab.grep(/^@[A-Z]/).count} handles qui commencent par une majuscule."
+    puts "----------------------------"
 end
 
 def sort (tab)
     puts "Voici la liste des handles dans l'ordre alaphbétique :\n#{tab.sort(&:casecmp)}"
+    puts "----------------------------"
 end
 
 def sort_by_length (tab)
@@ -34,6 +38,7 @@ end
 
 def find_epenser(tab)
     puts "Voici l'indice de @penser : #{tab.find_index("@epenser") +1}."
+    puts "----------------------------"
 end
 
 def count_by_length (tab)
@@ -44,20 +49,25 @@ def count_by_length (tab)
         end
         i +=1
     end
+    puts "----------------------------"
 end
 
-num_of_handle (tab)
-puts ""
-shortest_handle (tab)
-puts ""
-num_of_5_char (tab)
-puts ""
-num_of_Maj (tab)
-puts ""
-sort (tab)
-puts ""
-sort_by_length (tab)
-puts ""
-find_epenser(tab)
-puts ""
-count_by_length (tab)
+def perform (tab)
+    num_of_handle (tab)
+
+    shortest_handle (tab)
+
+    num_of_5_char (tab)
+
+    num_of_Maj (tab)
+ 
+    sort (tab)
+ 
+    sort_by_length (tab)
+  
+    find_epenser(tab)
+   
+    count_by_length (tab)
+end
+
+perfom
