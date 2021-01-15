@@ -70,4 +70,8 @@ def perform (tab)
     count_by_length (tab)
 end
 
+<<<<<<< HEAD
 perfom (tab)
+=======
+perform (tab)
+>>>>>>> origin
