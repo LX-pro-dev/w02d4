@@ -11,19 +11,21 @@ curr.zip(values) {|a, b| money[a] = b.to_f}
 def highest_value(money)
     max = money.max_by {|a, b| b}
     p "La valeur la plus grande est : #{max}"
+    puts ""
     puts "-----------------------------"
 end
 
 def min_value(money)
     min = money.min_by {|a, b| b}
-    p "La valeur monétaire la plus petite est : #{min}"
+    p "La valeur monétaire la plus petite est : #{money.select {|a, b| b == min[1]}}"
+    puts ""
     puts "-----------------------------"
 end
 
 def under_six(money)
-
     puts "Les monnaies en dessous de 6000 sont : "
     puts money.select {|a, b| b < 6000}
+    puts ""
     puts "-----------------------------"
 end
 
